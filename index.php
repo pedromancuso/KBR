@@ -24,34 +24,49 @@ if (isset($_GET['e'])) {
 <?php
 echo 
 "<!DOCTYPE html>
-<!--
-	Industrious by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
+<html lang='en'>
 	<head>
-		<title>KBR</title>
-		<meta charset='utf-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
-		<meta name='description' content='' />
-		<link rel='shortcut icon' type='image/png' href='./images/img/kbr2.png'/>
-		<meta name='keywords' content=''/>
-		<link rel='stylesheet' href='assets/css/main.css' />
-	</head>
-<body class='is-preload'>";	
-?>
-<?php include './static/templates/encabezado.php';?>
-<!--?php include './static/templates/informacion.php';?-->
-<!--?php include './static/templates/servicios.php';?-->
-<?php include './static/templates/contacto.php';?>
+		<meta charset='utf-8'>
+
+		<title>KBR Consultoría IT</title>
+		<meta http-equiv='X-UA-Compatible' content='IE=Edge'>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta name='keywords' content=''>
+		<meta name='description' content=''>
+		<link rel='shortcut icon' type='image/png' href='images/logo.png'/>
+		<!-- animate -->
+		<link rel='stylesheet' href='css/animate.min.css'>
+		<!-- bootstrap -->
+		<link rel='stylesheet' href='css/bootstrap.min.css'>
+		<!-- font-awesome -->
+		<link rel='stylesheet' href='css/font-awesome.min.css'>
+		<!-- google font -->
+		<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- custom -->
+		<link rel='stylesheet' href='css/style.css'>
+
+	</head>";
+?>	
+<?php include './kbr.php';?>
 <?php echo "<!-- Scripts -->
-			<script src='assets/js/jquery.min.js'></script>
-			<script src='assets/js/kbr.js'></script>
-			<script src='assets/js/browser.min.js'></script>
-			<script src='assets/js/breakpoints.min.js'></script>
-			<script src='assets/js/util.js'></script>
-			<script src='assets/js/main.js'></script>
+		<!-- jQuery -->
+		<script src='js/jquery.js'></script>
+		<!-- bootstrap -->
+		<script src='js/bootstrap.min.js'></script>
+		<!-- isotope -->
+		<script src='js/isotope.js'></script>
+		<!-- images loaded -->
+   		<script src='js/imagesloaded.min.js'></script>
+   		<!-- wow -->
+		<script src='js/wow.min.js'></script>
+		<!-- smoothScroll -->
+		<script src='js/smoothscroll.js'></script>
+		<!-- jquery flexslider -->
+		<script src='js/jquery.flexslider.js'></script>
+		<!-- custom -->
+		<script src='js/custom.js'></script>
 
 	</body>
-</html>"; ?>
+</html>";?>
