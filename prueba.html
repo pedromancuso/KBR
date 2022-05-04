@@ -606,22 +606,14 @@
 									<!--textarea class="textarea" placeholder="Mensaje"-->
 							</div>
 							<div class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
-								<?php if ($_SESSION['contacto']==3) {
-								echo "<textarea  rows='5' class='form-control' name='msg' id='msg' placeholder='Mensaje'></textarea>".$_POST['msg']."</textarea>";
-								}else{
-								echo "<textarea  rows='5' class='form-control' name='msg' id='msg' placeholder='Mensaje'></textarea></textarea>";}?>
+								<textarea  rows='5' class='form-control' name='msg' id='msg' placeholder='Mensaje'></textarea></textarea>
+								<textarea  rows='5' class='form-control' name='msg' id='msg' placeholder='Mensaje'></textarea></textarea>
 							</div>
-							<?php if ($_SESSION['contacto'] == 1) {
-								echo "<div class='col-md-12 col-sm-12 wow fadeIn' data-wow-delay='1s' id='formok' style='display: inline-block;'>Su Mensaje fue enviado correctamente!</div>";
-								echo "<script type='text/javascript'>window.location.href ='index.php#contact';</script>";
-							}else if ($_SESSION['contacto'] == 2) {
-								echo "<div class='col-md-12 col-sm-12 wow fadeIn' data-wow-delay='1s' id='formok' style='color:red;display: inline-block;'>Hubo un error! Intente nuevamente o contactese a contacto@kbr.com.ar</div>";
-								echo "<script type='text/javascript'>window.location.href ='index.php#contact';</script>";
-							}else if ($_SESSION['contacto'] == 3) {
-								echo "<div class='col-md-12 col-sm-12 wow fadeIn' data-wow-delay='1s' id='formok' style='color:red;display: inline-block;'>Hubo un error! Por favor ingrese todos los datos solicitados.</div>";
-								echo "<script type='text/javascript'>window.location.href ='index.php#contact';</script>";
-							}
-							?>
+								<div class='col-md-12 col-sm-12 wow fadeIn' data-wow-delay='1s' id='formok' style='display: inline-block;'>Su Mensaje fue enviado correctamente!</div>
+
+							
+								<div class='col-md-12 col-sm-12 wow fadeIn' data-wow-delay='1s' id='formok' style='color:red;display: inline-block;'>Hubo un error! Intente nuevamente o contactese a contacto@kbr.com.ar</div>
+								<div class='col-md-12 col-sm-12 wow fadeIn' data-wow-delay='1s' id='formok' style='color:red;display: inline-block;'>Hubo un error! Por favor ingrese todos los datos solicitados.</div>
 							<div class="col-md-offset-9 col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
 								<input name="submit" type="submit" class="form-control" id="submit" value="Enviar">
 							</div>
