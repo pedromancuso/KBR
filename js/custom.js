@@ -1,4 +1,7 @@
+var user="Admin";
+var pass="Admin";
 
+/*
 // google map
 var map = '';
 var center;
@@ -35,7 +38,7 @@ function loadGoogleMap(){
 // Flexslider
 $(function(){
   /* FlexSlider */
-  $('.flexslider').flexslider({
+ /* $('.flexslider').flexslider({
       animation: "fade",
       directionNav: false
   });
@@ -112,7 +115,7 @@ jQuery(document).ready(function($){
         });
     });
 
-
+*/
   consultoriaboton.addEventListener("click", consultoriain);
   consultoria.addEventListener("click", consultoriaout);
   function consultoriain(){
@@ -206,3 +209,49 @@ jQuery(document).ready(function($){
     document.getElementById("service").style.display = "block";
     document.getElementById("desarrollosi").className = "fa fa-code";
   }
+  document.getElementById('imprimir').addEventListener('click',accion);
+
+  function accion() {
+    var val=document.getElementById("texto-modal").value;
+    if(val==2){
+      document.getElementById("div2").innerHTML="Pustiste un 2";
+
+    }else{
+      document.getElementById("div2").innerHTML="NO Pustiste un 2"; 
+    }
+    
+    console.log(val);
+  }
+  
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("ticket-boton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// 1. añadir texto que diga ingrese credenciales
+// 2. añadir input y leyendas que correspondan placeholders (el input de la contraseña que no se vea)
+// 3. añadir un boton que envíe los valores de los imput a una función
+// 4. si las credenciales ingresadas son las correctas, mostar mensaje de exito sino lo contrario
+// 5. poner un contador de fracaso y si llegó al máximo cerrar el modal
+// 6. si las credenciales son correctas cerrar el modal luego del mens 
