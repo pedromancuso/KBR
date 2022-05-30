@@ -1,0 +1,19 @@
+{
+  "name": "kbr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedromancuso/KBR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedromancuso/KBR/issues"
+  },
+  "homepage": "https://github.com/pedromancuso/KBR#readme"
+}
