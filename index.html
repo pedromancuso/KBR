@@ -27,25 +27,47 @@
 
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
+
+
+
 	<!-- The Modal -->
 	<div id="modal-login" class="modal">
-
+		
 		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<form action="login.php" method="post" target="_blank" role="form" class="contactForm">
-			<input type="text" id="usuario" placeholder="Usuario">
-			<p id="requisito">El usuario es el mail registrado</p>
-			<input type="password" id="contraseña" placeholder="Contraseña">
-			<button  type="submit" class="form-control" id="login">Login</button>
-			<p id="requisito2">Debe incluir alguna mayúscula y número</p>
-			<div id="result"></div>
+
+			<form action="login22.php" target="dummyframe" method="post" role="form">
+				<input type="text" id="usuario" name="user" autocomplete="username" placeholder="Usuario"><br>
+				<!-- <p id="requisito">El usuario es el mail registrado</p> -->
+				<input type="password" id="contraseña" name="pass" autocomplete="current-password" placeholder="Contraseña">
+				<button type="submit" class="form-control" id="login" name="login">Login</button>
+				<!--<p id="requisito2">Debe incluir alguna mayúscula y número</p>-->
+				<iframe height="80%" width="30%" name="dummyframe" id="dummyframe" ></iframe>
+				<div id="result"></div>
+				<p>Olvidaste tu contrañea?</p>
+				<br>
+				
+
+				<!--<iframe name="dummyframe"          id="dummyframe"></iframe>-->
+			</form>
+			<form action ="registrate.php" method="post" role="form">
+				<button id="registrate" name="registrate">Registrate</button>
+				<input name="trate" id="trate" style="display: none;" value="1">
+			</form>
+
+		</form>
+		<form action ="registrate.php" method="post" role="form">
+			<button id="eliminar" name="eliminar">Eliminar</button>
+			<input name="trate" id="trate2" style="display: none;" value="2">
 		</form>
 
 		</div>
 
 	</div>
-<!--onclick="clickCounter()"-->
+
+	<!--onclick="clickCounter()" // style="display: none;" style="visibility: hidden;" target="dummyframe"-->
+
 	<!-- The Modal2 -->
 	<div id="modal-ticket" class="modal">
 
@@ -55,14 +77,78 @@
 			<input type="text" id="nombre-ticket" placeholder="Título Ticket">
 			<!--<p id="requisito">Defina el Ticket</p>-->
 			<p></p>
-			<textarea type="text" rows='5' id="cuerpo-ticket" placeholder="Descripción del ticket"></textarea>
+			<textarea type="text" rows='5' width="30%" id="cuerpo-ticket" placeholder="Descripción del ticket"></textarea><br>
 			<button type="button" id="ticket-enviar">Enviar</button>
 			<!--<p id="requisito2">Breve descripción del ticket</p>-->
-			
+
 
 		</div>
 
 	</div>
+
+	<!--
+	Nuevo Modal para registrarse Button trigger modal
+	<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+		Registrate
+	</button>
+
+	<!- - Modal - ->
+	<div class="modal fade modal-sm" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Registrate</h5>
+					<button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!- - otro modal - ->
+
+					<!- - Button trigger modal - ->
+					<input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+					<input type="password" placeholder="Enter Password" id="psw2" name="psw2" required>
+
+
+
+
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+						Cerrar
+					</button>
+					<button type="button" class="btn btn-primary">Guardar Cambios</button>
+					<button type="button" class="btn btn-primary" data-mdb-toggle="modal"
+						data-mdb-target="#exampleModal2">
+						Modificar Usuario
+					</button>
+					<!- - Fin otro modal - ->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<! -- Modal - ->
+	<div class="modal fade mt-5" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel2">Usuario a Modificar</h5>
+					<button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+				<input type="password" placeholder="Enter Password" id="psw2" name="psw2" required>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+						Cerrar
+					</button>
+					<button type="button" class="btn btn-primary">Guardar Cambios</button>
+				</div>
+			</div>
+		</div>
+	</div>
+ -->
 
 	<!-- start navigation -->
 	<div class="navbar navbar-fixed-top navbar-default" role="navigation">
@@ -74,14 +160,14 @@
 					<span class="icon icon-bar"></span>
 
 				</button>
-				<a href="#" class="navbar-brand"><img style="" src="images/kbr.png" class="img-responsive"
+				<a href="#" class="navbar-brand"><img  src="images/kbr.png" class="img-responsive"
 						alt="logo"></a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#home">HOME</a></li>
 					<li><a href="#service">SERVICIOS</a></li>
-					<!--li><a href="#about" class="smoothScroll">ABOUT</a></li>
+					<!--li><a href="#about" class="smoothScroll">ABOUT</a>    style="" lo saque de <a href   </li> 
 						<li><a href="#team" class="smoothScroll">TEAM</a></li>
 						<li><a href="#pricing" class="smoothScroll">PRICING</a></li>
 						<li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li-->
@@ -278,20 +364,27 @@
 					</div>
 					<div class="media-body wow fadeInUp">
 						<h3 class="media-heading">Soporte</h3>
-						<p>Sabemos la importancia del funcionamiento continuo de cada Pc y por eso ofrecemos distintos
+						<p>Sabemos la importancia del funcionamiento continuo de cada Pc y por eso ofrecemos
+							distintos
 							tipos de servicios en lo que respecta a soporte y mantenimiento de equipos informáticos.
-							<br><br><b>- Soporte remoto: </b>Se realiza una administración remota del o los equipos con
+							<br><br><b>- Soporte remoto: </b>Se realiza una administración remota del o los equipos
+							con
 							fallas, con el fin de solucionar inmediatamente las incidencias que retrasan las
 							actividades.
 							<br><br><b>- Soporte telefónico: </b>Con este servicio tratamos de acortar tiempos de
-							respuesta sobre incidencias en cualquiera de los equipos afectados, siempre que sea posible
+							respuesta sobre incidencias en cualquiera de los equipos afectados, siempre que sea
+							posible
 							la resolución telefónica de la incidencia.
-							<br><br><b>- Mantenimiento programado: </b>Este servicio comprende los fallos irrecuperables
-							en el hardware de los dispositivos, fallos en el software sin solución y mantenimiento de
-							las instalaciones. Se crea un calendario de visitas programadas que servirá para realizar
+							<br><br><b>- Mantenimiento programado: </b>Este servicio comprende los fallos
+							irrecuperables
+							en el hardware de los dispositivos, fallos en el software sin solución y mantenimiento
+							de
+							las instalaciones. Se crea un calendario de visitas programadas que servirá para
+							realizar
 							mantenimientos rutinarios de toda la instalación.
 							<br><br><b>- Soporte en sitio: </b>Se utiliza este servicio en caso que ninguno de los
-							anteriores haya sido útil. Se procede a una visita en el sitio para tratar de solucionar el
+							anteriores haya sido útil. Se procede a una visita en el sitio para tratar de solucionar
+							el
 							problema de forma rápida y correcta.
 
 						</p>
@@ -309,16 +402,22 @@
 						<h3 class="media-heading">Telefonia IP</h3>
 						<p>En el día de hoy, las empresas tienen como desafío poder transformar todo su equipamiento
 							telefónico en una herramienta la cual agilice procesos y tareas, y de esta forma se
-							potencien los grupos de trabajo. La Telefonía IP se ofrece como una solución; lo que hace es
-							establecer una plataforma tecnológica de datos sobre la cual se pueden implementar nuevas
-							formas de trabajo, de eficacia y sobre todo de comunicación empresarial.<br>Realizamos un
-							análisis de la necesidad del cliente, proponemos una solución para el proyecto y luego la
+							potencien los grupos de trabajo. La Telefonía IP se ofrece como una solución; lo que
+							hace es
+							establecer una plataforma tecnológica de datos sobre la cual se pueden implementar
+							nuevas
+							formas de trabajo, de eficacia y sobre todo de comunicación empresarial.<br>Realizamos
+							un
+							análisis de la necesidad del cliente, proponemos una solución para el proyecto y luego
+							la
 							llevamos a cabo. Entre las tareas a realizar, estas son algunas:<br>
 							<br>• Gestionamos la contratación del proveedor de telefonía adecuado.
 							<br>• Administramos la Central VOIP del lugar.
-							<br>• Damos capacitación al personal para que puedan aprovechar todos los recursos que esta
+							<br>• Damos capacitación al personal para que puedan aprovechar todos los recursos que
+							esta
 							tecnología ofrece.
-							<br>• Bajo esta modalidad de comunicación, tratamos de disminuir costos de servicios y de
+							<br>• Bajo esta modalidad de comunicación, tratamos de disminuir costos de servicios y
+							de
 							aumentar la calidad de comunicación.
 							<br>• Instalación de Asterick.
 							<br>• Gestión PBX.
@@ -337,14 +436,17 @@
 						<h3 class="media-heading">Servidores</h3>
 						<p>En cada entidad de Trabajo, por lo general hay un Data Center donde se encuentran los
 							Servidores que administran Información como así también el funcionamiento de toda la
-							Red.<br>Dentro de nuestra labor, ofrecemos tanto la instalación como el manteniendo de cada
+							Red.<br>Dentro de nuestra labor, ofrecemos tanto la instalación como el manteniendo de
+							cada
 							Servidor que se encuentre en el lugar.<br>Dentro de los Servicios de Servidores, se
 							encuentran los siguientes:<br>
 							<br><b>• Servidores locales: </b>el servidor que necesites con espacios de trabajo
 							compartido, permisos de acceso, niveles de seguridad...
-							<br><b>• Copias de seguridad: </b>Gestionamos las copias de seguridad de cada servidor que
+							<br><b>• Copias de seguridad: </b>Gestionamos las copias de seguridad de cada servidor
+							que
 							necesite respaldo continuo.
-							<br><b>• Firewall: </b>Si es necesario, instalamos cortafuegos físicos o los gestionamos en
+							<br><b>• Firewall: </b>Si es necesario, instalamos cortafuegos físicos o los gestionamos
+							en
 							servidores y equipos.
 							<br><b>• Servidores online: </b>Ante mayor seguridad, también gestionamos servidores en
 							remoto para datos, copias de seguridad y demás.
@@ -363,7 +465,8 @@
 						<h3 class="media-heading">Redes</h3>
 						<p>En KBR realizamos el armado y la configuración de redes, cableado interno, estructuras de
 							comunicaciones y configuración de Routers, Switches y Access Point.<br><br>
-							Además, brindamos el soporte necesario para el mantenimiento de la red, permitiendo obtener
+							Además, brindamos el soporte necesario para el mantenimiento de la red, permitiendo
+							obtener
 							una comunicación continua y óptima dentro de la empresa o con los clientes.<br>
 							<br>A continuación detallamos algunos de los servicios de redes:
 							<br>• Configuración de Routers, Switches y Acces Point.
@@ -383,27 +486,37 @@
 					<div class="media-body wow fadeInUp">
 						<h3 class="media-heading">Desarrollos</h3>
 						<p><br><b>DESARROLLO DE APLICACIONES</b>
-							<br>Nuestras Apps son desarrolladas de manera nativa, lo que nos permite utilizar los APIs
-							“nativos” de los dispositivos móviles que hacen uso de las funcionalidades específicas como
-							la cámara, micrófono, brújula, GPS; ofreciendo así una experiencia de usuario final mucho
-							más atractiva, ágil y poderosa.<br>Nos encargamos de todo el ciclo de vida de la App, desde
-							el análisis de requerimientos, diseño funcional, diseño visual, arquitectura, experiencia de
+							<br>Nuestras Apps son desarrolladas de manera nativa, lo que nos permite utilizar los
+							APIs
+							“nativos” de los dispositivos móviles que hacen uso de las funcionalidades específicas
+							como
+							la cámara, micrófono, brújula, GPS; ofreciendo así una experiencia de usuario final
+							mucho
+							más atractiva, ágil y poderosa.<br>Nos encargamos de todo el ciclo de vida de la App,
+							desde
+							el análisis de requerimientos, diseño funcional, diseño visual, arquitectura,
+							experiencia de
 							usuario, construcción y difusión, publicación en el Marketplace de Apple, Google y
 							Windows.<br>
 							<br><b>DESARROLLO Y DISEÑO WEB</b>
 							<br>Nos encargamos de estudiar cada caso para definir, diseñar y ejecutar el diseño y
-							desarrollo de la página web para empresas y marcas. Realizamos todo tipo de proyectos web a
-							medida, según las necesidades para cada negocio; armamos tanto el diseño como el desarrollo.
-							Para una empresa, sea cual sea su sector, el tener una página web que cumpla sus objetivos
+							desarrollo de la página web para empresas y marcas. Realizamos todo tipo de proyectos
+							web a
+							medida, según las necesidades para cada negocio; armamos tanto el diseño como el
+							desarrollo.
+							Para una empresa, sea cual sea su sector, el tener una página web que cumpla sus
+							objetivos
 							puede ser de vital importancia, siendo que hoy en día la web no es solo una tarjeta de
-							visita en Internet, sino también una herramienta de Marketing y expansión de negocio.<br>
+							visita en Internet, sino también una herramienta de Marketing y expansión de
+							negocio.<br>
 							<br><b>DESKTOP SOFTWARE</b>
 							<br>Una aplicación de escritorio es aquella que se encuentra instalado en el ordenador y
 							podemos ejecutarlo sin internet en nuestro sistema operativo, al contrario que las
 							aplicaciones en la nube que se encuentran en un servidor de Internet, al que accedemos a
 							través de la red o internet a su software.
 							<br>
-							En una empresa, donde lo fuerte de su negocio es la venta directa a clientes mediante puntos
+							En una empresa, donde lo fuerte de su negocio es la venta directa a clientes mediante
+							puntos
 							de venta definitivamente, a modo de conveniencia le va a servir más una aplicación en
 							escritorio que una aplicación web.
 						</p>
@@ -427,7 +540,8 @@
 					<p class="wow fadeInUp" data-wow-delay="0.9s">Nuestra tarea es orientar a las empresas en lo que
 						respecta a todos los temas de Informática y Tecnología.<br></p>
 					<p class="wow fadeInUp" data-wow-delay="0.9s">Sabemos lo importante que es una correcta
-						administración de variables informáticas en una empresa, por ello ofrecemos diferentes ofertas
+						administración de variables informáticas en una empresa, por ello ofrecemos diferentes
+						ofertas
 						que se ajustan a cada cliente.<br></p>
 					<p class="wow fadeInUp" data-wow-delay="0.9s">No solo instalamos, implementamos y administramos
 						sistemas informáticos, también brindamos ayuda en el uso de las tecnologías para lograr los
@@ -732,8 +846,8 @@
 						<p><i class="fa fa-envelope-o too-icon"></i> contacto@kbrtechgroup.com.ar</p>
 					</address>
 				</div>
-				<form action="index.php" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form"
-					name="contactform">
+				<form action="index.html" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form"
+					name="contact-form">
 					<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
 
 						<input name='name' type='text' class='form-control' id='name' placeholder='Nombre' />
@@ -767,7 +881,36 @@
 	</div>
 	<!-- end contact -->
 
-	<!-- start ticket -->
+	<!-- The Modal registrarse va dentro de form target="dummyframe2"-->
+	<!-- <form method="post" action="modificar.php" target="dummyframe2" role="form">
+		<div class="imgcontainer">
+			<img src="/Master.jpg" alt="Avatar" class="avatar">
+		</div>
+		<div class="container">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+
+			<label for="psw2"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" id="psw2" name="psw2" required>
+
+			<button type="submit" id="regis" name="regis" value="GO">Registrate</button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+		<iframe name="dummyframe2" id="dummyframe2" style="display: none;"></iframe>
+		<div class="container" style="background-color:#f1f1f1">
+			<span class="psw">Forgot <a href="registrate">password?</a></span>
+	</form>
+	<br>
+	<form method="post" action="modificar.php" target="dummyframe3" role="form"></form>
+	<button type="submit" id="modif" name="modif" value="modif" class="cancelbtn">Modificar Usuario</button>
+	<iframe name="dummyframe3" id="dummyframe3" style="display: none;"></iframe>
+
+	</div>
+	</form> -->
+
+	<!-- start ticket  esto van dentro de iframe style="display: none;" va en la linea del button regis onclick="regis()" y esto va en el button modif onclick="modif()"-->
 	<div id="ticket">
 		<!-- end ticket -->
 
@@ -821,7 +964,6 @@
 			<script src='js/jquery.flexslider.js'></script>
 
 			<script src='js/contactform.js'></script>
-
 			<!-- custom -->
 			<script src='js/custom.js'></script>
 

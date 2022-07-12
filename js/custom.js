@@ -209,21 +209,21 @@ function desarrollosout() {
   document.getElementById("service").style.display = "block";
   document.getElementById("desarrollosi").className = "fa fa-code";
 }
-document.getElementById('login').addEventListener('click', accion);
+//document.getElementById('login').addEventListener('click', accion);
 
-function accion() {
-  var val = document.getElementById("usuario").value;
-  document.getElementById("requisito").innerHTML = val.lastIndexOf("@");
+// function accion() {
+//   var val = document.getElementById("usuario").value;
+//   document.getElementById("requisito").innerHTML = val.lastIndexOf("@");
 
-  if (val.lastIndexOf("@") <= 0) {
-    document.getElementById("requisito").innerHTML = "No pusiste un correo válido";
+//   if (val.lastIndexOf("@") <= 0) {
+//     document.getElementById("requisito").innerHTML = "No pusiste un correo válido";
 
-  } else {
-    document.getElementById("requisito").innerHTML = "El correo es válido";
-  }
+//   } else {
+//     document.getElementById("requisito").innerHTML = "El correo es válido";
+//   }
 
-  console.log(val.lastIndexOf("@"));
-}
+//   console.log(val.lastIndexOf("@"));
+// }
 
 var logged = false;
 document.getElementById('login').addEventListener('click', accion1);
@@ -231,14 +231,14 @@ function accion1() {
   var val = document.getElementById("usuario").value;
   //document.getElementById("requisito").innerHTML = val.lastIndexOf("@");
 
-  if (val == user) {
-    document.getElementById("requisito").innerHTML = "Usuario Correcto";
+  // if (val == user) {
+  //   document.getElementById("requisito").innerHTML = "Usuario Correcto";
 
-  } else {
-    document.getElementById("requisito").innerHTML = "Usuario Incorrecto";
-    var errores = 1;
-    console.log(errores);
-  }
+  // } else {
+  //   document.getElementById("requisito").innerHTML = "Usuario Incorrecto";
+  //   var errores = 1;
+  //   console.log(errores);
+  // }
 
   console.log(val);
 }
@@ -248,13 +248,13 @@ function accion2() {
   var val = document.getElementById("contraseña").value;
   //document.getElementById("requisito").innerHTML = val.lastIndexOf("@");
 
-  if (val == pass) {
-    document.getElementById("requisito2").innerHTML = "Contraseña Correcta";
-    console.log(logged);
-  } else {
-    document.getElementById("requisito2").innerHTML = "Contraseña Incorrecta";
+  // if (val == pass) {
+  //   document.getElementById("requisito2").innerHTML = "Contraseña Correcta";
+  //   console.log(logged);
+  // } else {
+  //   document.getElementById("requisito2").innerHTML = "Contraseña Incorrecta";
 
-  }
+  // }
 
   console.log(val);
 }
@@ -269,7 +269,11 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
-  modal.style.display = "block";
+  modal.style.display = "inline-block";
+  modal2.style.display = "none";
+  //var x = document.createElement("IFRAME");
+ // x.setAttribute("dummyframe", id = "dummyframe");
+ // document.body.appendChild(x);
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -285,11 +289,41 @@ window.onclick = function (event) {
 }
 
 
+// Get the modal2
+var modal2 = document.getElementById("modal-ticket");
+// Get the button that opens the modal
+var btn2 = document.getElementById("ticket-boton");
 
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
 
+// When the user clicks on the button, open the modal
+btn2.onclick = function () {
+  modal2.style.display = "block";
+  modal.style.display = "none";
+}
 
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function () {
+  modal2.style.display = "none";
+}
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event2) {
+  if (event2.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
 
+//var prueba = document.getElementById("login-boton");
+//prueba.onclick= function agus() {
+//alert("Hello! I am an alert box!");
+// console.log("agus");
+// var x = document.createElement("IFRAME");
+// x.setAttribute("dummyframe", id="dummyframe");
+//  document.body.appendChild(x);
+
+//}
 
 function clickCounter() {
 
@@ -320,8 +354,6 @@ function clickCounter() {
       sessionStorage.clear();
       var error = 0;
       logged = true;
-      //console.log(intentos);
-      //console.log("clickcount");
       const myTimeout = setTimeout(myGreeting, 2000);
       function myGreeting() {
         modal.style.display = "none";
@@ -342,8 +374,8 @@ function clickCounter() {
           logged = false;
         }
       }
-    } 
-  
+    }
+
   } else {
     var error = 1;
     if (typeof (Storage) !== "undefined") {
@@ -364,6 +396,28 @@ function clickCounter() {
 
 }
 
+document.getElementById('ticket-enviar').addEventListener('click', accion3);
+function accion3() {
+  document.getElementById('nombre-ticket').value = '';
+  document.getElementById('cuerpo-ticket').value = '';
+  //document.getElementById("requisito").innerHTML = "Defina el Ticket";
+  //document.getElementById("requisito2").innerHTML = "Breve descripción del ticket";
+}
+
+// document.getElementById('regis').addEventListener('click', accion44);
+// function accion44() {
+//   const myTimeout = setTimeout(myGreeting2, 1000);
+//   function myGreeting2() {
+//   document.getElementById('uname').value = '';
+//   document.getElementById('psw2').value = '';
+//   }
+
+// }
+
+var regist = document.getElementById('registrar');
+function registrar(){
+  alert("Las contraseñas deben ser iguales");
+}
 
 
 
@@ -373,4 +427,10 @@ function clickCounter() {
 // 3. añadir un boton que envíe los valores de los imput a una función check
 // 4. si las credenciales ingresadas son las correctas, mostar mensaje de exito sino lo contrario check
 // 5. poner un contador de fracaso y si llegó al máximo cerrar el modal
-// 6. si las credenciales son correctas cerrar el modal luego del mens 
+// 6. si las credenciales son correctas cerrar el modal luego del mens
+
+// 7. evitar redirección (obtener resultado de php en la misma pagina o en modal)
+// 8. crear, leer, actualizar, modficiar y eliminar usuarios a la base de datos
+// 9. poner contraseña a la base de datos al usuario root
+//10. si el ingreso es correcto, crear un alert que diga: "bienvenido y el nombre del usuario"
+//11. 
