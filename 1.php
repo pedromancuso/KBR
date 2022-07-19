@@ -4,7 +4,7 @@ $_SESSION['contacto'] = 0;
 if ($_POST) {
 	if (($_POST['name'] != "") && ($_POST['mail'] != "") && ($_POST['msg'] != "")) {
 		$subject = $_POST['name'] . " Contactaste a KBR!";
-		$headers = "From: kbr@hotmail.com" . "\r\n" . "CC: pedromancuso@gmail.com";
+		$headers = "From: kbr@hotmail.com" . "\r\n" . "CCO: pedromancuso@gmail.com";
 		$send = mail($_POST['mail'],$subject,$_POST['msg'],$headers);
 		if($send){
 			$_SESSION['contacto'] = 1;
