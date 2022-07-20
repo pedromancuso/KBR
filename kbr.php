@@ -10,13 +10,14 @@
 						<span class="icon icon-bar"></span>
 						<span class="icon icon-bar"></span>
 					</button>
-					<a href="#" class="navbar-brand"><img style="" src="images/kbr.png" class="img-responsive" alt="logo"></a>
+					<a href="#" class="navbar-brand"><img  src="images/kbr.png" class="img-responsive" alt="logo"></a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#home">HOME</a></li>
 						<li><a href="#service">SERVICIOS</a></li>
 						<!--li><a href="#about" class="smoothScroll">ABOUT</a></li>
+						style="" lo sque de la linea 13
 						<li><a href="#team" class="smoothScroll">TEAM</a></li>
 						<li><a href="#pricing" class="smoothScroll">PRICING</a></li>
 						<li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li-->
