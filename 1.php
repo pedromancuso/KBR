@@ -43,7 +43,7 @@ echo
 		<link rel='stylesheet' href='css/font-awesome.min.css'>
 		<!-- google font -->
 		<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
 		<!-- custom -->
 		<link rel='stylesheet' href='css/style.css'>
 
